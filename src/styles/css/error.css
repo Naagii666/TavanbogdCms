@@ -1,0 +1,14 @@
+.errorPageContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.errorCode {
+  color: #f5222d;
+  margin-bottom: 0;
+}
+
+.errorDetail {
+  font-size: 16pt;
+}

@@ -1,0 +1,19 @@
+@mixin args($color) {
+  border: none;
+  background-color: $color;
+
+  &:hover {
+    background-color: lighten($color, 8%);
+  }
+}
+.success-btn {
+  @include args(#95d372);
+}
+
+.warning-btn {
+  @include args(#ffc353);
+}
+
+.cyan-btn {
+  @include args(#13c2c2);
+}

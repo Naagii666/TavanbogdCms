@@ -1,0 +1,11 @@
+.topBox {
+  display: flex;
+  padding: 20px 0;
+}
+
+.rightAligned {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}

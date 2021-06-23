@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 0.5rem;
+  width: 20rem;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.btnContainer {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  font-weight: 500;
+  color: #808080;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  width: 7rem;
+  margin-top: 0.2rem;
+}
+
+.searchBtn, .searchBtn:hover, .searchBtn:active, .searchBtn:focus {
+  width: 7rem;
+  margin-left: 15px;
+  border-color: #f09900;
+  color: #f09900;
+}

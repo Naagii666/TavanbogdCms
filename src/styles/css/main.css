@@ -1,0 +1,7 @@
+@import '~antd/dist/antd.css';
+@import '../fonts/ptsans/ptsans.min.css';
+@import './login.css';
+@import './theme.css';
+@import './custom.css';
+@import './error.css';
+@import './font.css';

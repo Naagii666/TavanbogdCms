@@ -1,0 +1,25 @@
+.login {
+    height: 100vh;
+    background-color: #f8f8f8;
+    display: grid;
+    place-items: center;
+}
+
+.loginContainer {
+    padding: 100px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.loginImg {
+    object-fit: contain;
+    height: 80px;
+    margin-bottom: 40px;
+}
+
+.loginBtn, .loginBtn:hover, .loginBtn:active, .loginBtn:focus {
+    background: #2c2e3e;
+    border-color: #2c2e3e;
+}
