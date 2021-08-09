@@ -40,6 +40,7 @@ const Login = () => {
     setLoading(true);
     const res = await login(values);
     if (res.response || res.data === undefined) {
+      console.log(res.response)
       if (res.response.data.error === "unauthorized") {
         setModalVisible(true);
         showMessage(messageType.FAILED.type, defaultMsg.newDeviceConfirmErrorTxt);
@@ -80,7 +81,7 @@ const Login = () => {
   return (
     <div className="login">
       <div className="loginContainer">
-        <img src="/logo.png" alt="logo" className="loginImg" />
+        {/* <img src="/logo.png" alt="logo" className="loginImg" /> */}
         <Form
           {...layout}
           name="basic"

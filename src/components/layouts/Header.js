@@ -56,7 +56,7 @@ const Nav = () => {
               borderBottom: "1px solid #109720",
             }}
           >
-            {user.user_name.toUpperCase()}
+            {typeof user.user_name != "undefined" ? user.user_name.toUpperCase() : null}
           </span>
         </Dropdown>
       </div>

@@ -16,23 +16,30 @@ export const ContextProvider = ({ children }) => {
 
   const checkPermission = (permission) => {
     // return state.permissions[permission] ? true : false;
-    return true;
+    return false;
   }
 
   const setMenuAndPermissions = async () => {
     //#region set permission
     const accessToken = Auth.getToken();
-    if (accessToken == null || accessToken == 'undefined') {
-      router.push('/login');
-      return;
-    }
-    const user = jwt_decode(accessToken);
+    // let role = "admin";
+    let role = "visitor";
     let permissionList = {};
-    if (user.authorities !== undefined) {
-      user.authorities.map((auths) => {
-        permissionList[auths] = auths;
-      });
+    if (router.pathname.startsWith("/admin")) {
+      if (accessToken == null || accessToken == 'undefined') {
+        router.push('/login');
+        return;
+      }else{
+        const user = jwt_decode(accessToken);
+        
+        if (user.authorities !== undefined) {
+          user.authorities.map((auths) => {
+            permissionList[auths] = auths;
+          });
+        }
+      }
     }
+    
     dispatch({
       type: 'PERMISSIONS',
       payload: permissionList
